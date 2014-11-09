@@ -1,0 +1,105 @@
+---
+layout: layout
+---
+
+<header class="hero">
+  <%= partial "partials/global_nav" %>
+</header>
+
+<h1 class="page-title">
+  <%= t("community.title") %>
+</h1>
+<h5 class="community-subtitle">
+  <%= t("community.subtitle") %>
+</h5>
+
+<section class="featured">
+  <article class="container">
+    <ul class="centered-content">
+      <li class="community-social-link-item github-link">
+        <%= link_to "Fork on GitHub",
+          "https://github.com/middleman/middleman", class: "community-social-link" %>
+      </li>
+  </article>
+</section>
+
+<section class="community">
+  <div class="container">
+    <h4 class="community-title">
+      Contributions from Middleman Users
+    </h4>
+    <article class="community-feature-list">
+      <div class="community-feature-item">
+        <div class="community-feature-icon-wrapper">
+          <%= image_tag ("community-icons/icon-extensions.svg") %>
+        </div>
+        <div class="community-feature-text-wrapper">
+          <h5 class="community-feature-header">
+            <%= t("community.extensions.header") %>
+          </h5>
+          <p>
+            <%= t("community.extensions.description") %>
+          </p>
+          <p>
+            <%= link_to t("community.extensions.link_text"), "/" %>
+          </p>
+        </div>
+      </div>
+      <div class="community-feature-item">
+        <div class="community-feature-icon-wrapper">
+          <%= image_tag ("community-icons/icon-project-templates.svg") %>
+        </div>
+        <div class="community-feature-text-wrapper">
+          <h5 class="community-feature-header">
+            <%= t("community.templates.header") %>
+          </h5>
+          <p>
+            <%= t("community.templates.description") %>
+          </p>
+          <p>
+            <%= link_to t("community.templates.link_text"), "/" %>
+          </p>
+        </div>
+      </div>
+      <div class="community-feature-item">
+        <div class="community-feature-icon-wrapper">
+          <%= image_tag ("community-icons/icon-deployment-solutions.svg") %>
+        </div>
+        <div class="community-feature-text-wrapper">
+          <h5 class="community-feature-header">
+            <%= t("community.deployment.header") %>
+          </h5>
+          <p>
+            <%= t("community.deployment.description") %>
+          </p>
+          <p>
+            <%= link_to t("community.deployment.link_text"), "/" %>
+          </p>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="forum centered-content">
+  <h5>
+   Visit the Forum
+  </h5>
+  <article>
+    <%= link_to "Visit the Forum",
+      "http://forum.middlemanapp.com/", class: "forum-cta" %>
+  </article>
+
+
+  <div class="introduction-container container">
+    <div class="introduction-item">
+      <div class="introduction-item-graphic-wrapper">
+        <div class="introduction-browser browser">
+        <img src="/images/community-forum.jpg">
+  <pre class="introduction-browser-body">
+  </pre>
+</div>
+      </div>
+
+
+</section>

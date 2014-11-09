@@ -1,3 +1,17 @@
+@mixin button-style {
+  border-radius: $base-border-radius;
+  color: white;
+  display: inline-block;
+  font-weight: $font-weight-bold;
+  padding: 0.75em 1.25em;
+  text-align: center;
+
+  &:hover {
+    color: white;
+  }
+}
+
+
 .community {
   padding: 2em 0;
 
@@ -88,5 +102,41 @@
   &:hover {
     border-color: darken($navy, 20);
     color: darken($navy, 20);
+  }
+}
+
+.page-title {
+  @include fill-parent;
+  @include clearfix;
+  color: $dark-gray;
+  text-align: center;
+  padding-bottom: 0.5em;
+
+  @include media($medium-screen-up) {
+    padding-bottom: 1em;
+  }
+}
+
+.community-feature-item {
+  @include span-columns(4 of 12);
+  text-align: center;
+  padding: 2em;
+  background: $washed-out-gray;
+}
+
+.community-feature-icon-wrapper img {
+  width: 90px;
+}
+
+.forum {
+  background-color: $navy;
+}
+
+.forum-cta {
+  @include button-style;
+  background-color: $medium-gray;
+
+  &:hover {
+    background-color: darken($medium-gray, 10);
   }
 }
