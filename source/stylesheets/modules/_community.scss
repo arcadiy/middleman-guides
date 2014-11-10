@@ -49,7 +49,16 @@
 .community-feature-header {
   color: $dark-gray;
   font-size: $base-font-size * 1.15;
-  margin-bottom: 0.5em;
+  margin: 0.5em 0;
+}
+
+.community-feature-text {
+  font-size: $base-font-size;
+}
+
+.community-feature-link {
+  font-size: $base-font-size;
+  margin-bottom: 0em;
 }
 
 .community-cta {
@@ -118,25 +127,53 @@
 }
 
 .community-feature-item {
-  @include span-columns(4 of 12);
   text-align: center;
-  padding: 2em;
+  padding: 3em 2em;
   background: $washed-out-gray;
+  margin-bottom: 2em;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include media($medium-screen-up) {
+    @include span-columns(4 of 12);
+    margin-bottom: 0;
+  }
 }
 
 .community-feature-icon-wrapper img {
   width: 90px;
 }
 
+.community-intro {
+  // padding-top: 4em;
+  padding-bottom: 4em;
+  border-bottom: 1px solid $base-border-color;
+}
+
 .forum {
   background-color: $navy;
+  padding: 4em 0;
+  margin: 2em 0;
 }
 
 .forum-cta {
   @include button-style;
-  background-color: $medium-gray;
+  border: 2px solid white;
 
   &:hover {
-    background-color: darken($medium-gray, 10);
+    background-color: white;
+    color: $navy;
   }
+}
+
+.forum-item-header {
+  color: white;
+}
+
+.forum-item-text {
+  color: white;
+  font-size: $base-font-size;
+  padding: 2em 0;
 }

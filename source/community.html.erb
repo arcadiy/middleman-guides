@@ -6,27 +6,26 @@ layout: layout
   <%= partial "partials/global_nav" %>
 </header>
 
-<h1 class="page-title">
-  <%= t("community.title") %>
-</h1>
-<h5 class="community-subtitle">
-  <%= t("community.subtitle") %>
-</h5>
-
-<section class="featured">
-  <article class="container">
+<section>
+  <div class="community-intro container">
+    <h1 class="page-title">
+      <%= t("community.title") %>
+    </h1>
+    <h5 class="community-subtitle">
+      <%= t("community.main_text") %>
+    </h5>
     <ul class="centered-content">
       <li class="community-social-link-item github-link">
         <%= link_to "Fork on GitHub",
           "https://github.com/middleman/middleman", class: "community-social-link" %>
       </li>
-  </article>
+  </div>
 </section>
 
 <section class="community">
   <div class="container">
     <h4 class="community-title">
-      Contributions from Middleman Users
+      <%= t("community.contributions") %>
     </h4>
     <article class="community-feature-list">
       <div class="community-feature-item">
@@ -37,26 +36,26 @@ layout: layout
           <h5 class="community-feature-header">
             <%= t("community.extensions.header") %>
           </h5>
-          <p>
+          <p class="community-feature-text">
             <%= t("community.extensions.description") %>
           </p>
-          <p>
+          <p class="community-feature-link">
             <%= link_to t("community.extensions.link_text"), "/" %>
           </p>
         </div>
       </div>
       <div class="community-feature-item">
         <div class="community-feature-icon-wrapper">
-          <%= image_tag ("community-icons/icon-project-templates.svg") %>
+            <%= image_tag ("community-icons/icon-project-templates.svg") %>
         </div>
         <div class="community-feature-text-wrapper">
           <h5 class="community-feature-header">
             <%= t("community.templates.header") %>
           </h5>
-          <p>
+          <p class="community-feature-text">
             <%= t("community.templates.description") %>
           </p>
-          <p>
+          <p class="community-feature-link">
             <%= link_to t("community.templates.link_text"), "/" %>
           </p>
         </div>
@@ -69,10 +68,10 @@ layout: layout
           <h5 class="community-feature-header">
             <%= t("community.deployment.header") %>
           </h5>
-          <p>
+          <p class="community-feature-text">
             <%= t("community.deployment.description") %>
           </p>
-          <p>
+          <p class="community-feature-link">
             <%= link_to t("community.deployment.link_text"), "/" %>
           </p>
         </div>
@@ -81,25 +80,32 @@ layout: layout
   </div>
 </section>
 
-<section class="forum centered-content">
-  <h5>
-   Visit the Forum
-  </h5>
-  <article>
-    <%= link_to "Visit the Forum",
-      "http://forum.middlemanapp.com/", class: "forum-cta" %>
-  </article>
-
-
-  <div class="introduction-container container">
+<section class="forum">
+  <div class="container">
     <div class="introduction-item">
+      <div class="introduction-item-text-wrapper">
+        <h4 class="forum-item-header">
+          <%= t("community.forum.header") %> 
+        </h4>
+        <p class="forum-item-text">
+          <%= t("community.forum.description") %>
+        </p>
+        <article>
+        <%= link_to t("community.forum.link_text"), 
+            "http://forum.middlemanapp.com/", class: "forum-cta" %>
+        </article>
+      </div>
       <div class="introduction-item-graphic-wrapper">
         <div class="introduction-browser browser">
         <img src="/images/community-forum.jpg">
-  <pre class="introduction-browser-body">
-  </pre>
-</div>
-      </div>
+    </div>
+  </div>
+</section>
 
-
+<section class="community">
+  <div class="container">
+    <h4 class="community-title">
+      <%= t("community.built_using_middleman") %>
+    </h4>
+  </div>
 </section>
