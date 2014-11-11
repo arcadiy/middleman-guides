@@ -11,15 +11,6 @@
   }
 }
 
-
-.community {
-  padding: 2em 0;
-
-  @include media($medium-screen-up) {
-    padding: 4em 0;
-  }
-}
-
 .community-title {
   @include fill-parent;
   @include clearfix;
@@ -147,9 +138,7 @@
 }
 
 .community-intro {
-  // padding-top: 4em;
-  padding-bottom: 4em;
-  border-bottom: 1px solid $base-border-color;
+  padding-top: 4em;
 }
 
 .forum {

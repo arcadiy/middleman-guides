@@ -2,26 +2,20 @@
 layout: layout
 ---
 
-<header class="hero">
-  <%= partial "partials/global_nav" %>
-</header>
-
-<section>
-  <div class="community-intro container">
-    <h1 class="page-title">
-      <%= t("community.title") %>
-    </h1>
-    <h5 class="community-subtitle">
-      <%= t("community.main_text") %>
-    </h5>
-    <ul class="centered-content">
-      <li class="community-social-link-item github-link">
-        <%= link_to "Fork on GitHub",
-          "https://github.com/middleman/middleman", class: "community-social-link" %>
-      </li>
-  </div>
+<section class="community-intro container">
+  <h1 class="page-title">
+    <%= t("community.title") %>
+  </h1>
+  <h5 class="community-subtitle">
+    <%= t("community.main_text") %>
+  </h5>
+  <ul class="centered-content">
+    <li class="community-social-link-item github-link">
+      <%= link_to "Fork on GitHub",
+        "https://github.com/middleman/middleman", class: "community-social-link" %>
+    </li>
 </section>
-
+<hr>
 <section class="community">
   <div class="container">
     <h4 class="community-title">
