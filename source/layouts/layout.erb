@@ -10,6 +10,9 @@
     <title><%= page_title %></title>
   </head>
   <body>
+  <header id="header">
+    <%= partial 'partials/global_nav' %>
+  </header>
     <%= yield %>
     <%= partial "localizable/footer" %>
 
